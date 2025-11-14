@@ -1,0 +1,102 @@
+/* src/index.css or src/App.css */
+@import "tailwindcss";
+
+*{
+  box-sizing: border-box;
+}
+
+@theme {
+  --color-primary: #ffc700; 
+  --color-primary-100: #fff3d5;
+  --color-primary-200: #ffe8ab;
+  --color-primary-300: #ffdd80;
+  --color-primary-400: #ffd252;
+  --color-primary-500: #ffc700;
+  --color-primary-600: #c79b12;
+  --color-primary-700: #917217;
+  --color-primary-800: #604b16;
+  --color-primary-900: #322811;
+ 
+  --color-secondary: #454852; 
+  --color-secondary-100: #d7d7da;
+  --color-secondary-200: #b0b1b6;
+  --color-secondary-300: #8b8c93;
+  --color-secondary-400: #676972;
+  --color-secondary-500: #454852;
+  --color-secondary-600: #383a42;
+  --color-secondary-700: #2b2d32;
+  --color-secondary-800: #1f2023;
+  --color-secondary-900: #131415;
+
+  --color-tertiary: #2f3547;
+
+  --color-neutral: #ffffff; 
+  --color-neutral-100: #f0f0f0;
+  --color-neutral-200: #D2D2D2;
+  --color-neutral-300: #b1b1b1;
+  --color-neutral-400: #929292;
+  --color-neutral-500: #5d5d5d;
+  --color-neutral-600: #353535;
+  --color-neutral-700: #2c2c2c;
+  --color-neutral-800: #252525;
+  --color-neutral-900: #1f1f1f;
+}
+body {
+  scrollbar-color: #3f4042 #141415;
+  scrollbar-width:thin /* Optional: Set 
+  scrollbar width */
+}
+
+.slider-wrap {
+  position: relative;
+}
+
+.slider-wrap .swiper-button-next{
+  position: absolute;
+  top: 24px !important;
+  right: 0 !important;
+  color:white;
+  background-color: #383A42;
+  border-radius: 12px;
+  padding: 4px;
+}
+
+.slider-wrap .swiper-button-prev{
+  position: absolute;
+  left: unset !important;
+  top: 24px !important;
+  right: 60px !important;
+  color:white;
+  background-color: #383A42;
+  border-radius: 12px;
+  padding: 4px;
+}
+
+.slider-wrap .swiper-navigation-icon{
+  width: 16px;
+  height: 16px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes menuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-menu {
+  animation: menuSlideDown 0.25s ease-out;
+}
