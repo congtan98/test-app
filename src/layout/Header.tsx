@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import Button from "../components/Button";
 import clsx from "clsx";
 
 const MENU_TABS = ["home", "product", "contact", "price"];
@@ -29,39 +29,63 @@ const Header = () => {
           );
         })}
       </div>
-      <div className="md:hidden">
-        <svg
-          width="24"
-          height="19"
-          viewBox="0 0 24 19"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          onClick={() => setOpenedMenu(!openedMenu)}
-        >
-          <rect
+      <div className="md:hidden flex items-center gap-2">
+        {openedMenu ? (
+          <svg
             width="24"
-            height="3"
-            rx="1.5"
-            fill="white"
-            fill-opacity="0.8"
-          />
-          <rect
-            y="8"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            onClick={() => setOpenedMenu(false)}
+          >
+            <path
+              d="M3.0606 2.93937C2.47481 3.52516 2.47481 4.4749 3.0606 5.06069L17.9098 19.9099C18.4956 20.4957 19.4454 20.4957 20.0312 19.9099C20.6169 19.3241 20.6169 18.3744 20.0312 17.7886L5.18192 2.93937C4.59613 2.35358 3.64639 2.35358 3.0606 2.93937Z"
+              fill="white"
+              fill-opacity="0.8"
+            />
+            <path
+              d="M3.0606 20.0605C2.47481 19.4747 2.47481 18.5249 3.0606 17.9392L17.9098 3.08991C18.4956 2.50413 19.4454 2.50413 20.0312 3.08991C20.6169 3.6757 20.6169 4.62545 20.0312 5.21123L5.18192 20.0605C4.59613 20.6463 3.64639 20.6463 3.0606 20.0605Z"
+              fill="white"
+              fill-opacity="0.8"
+            />
+          </svg>
+        ) : (
+          <svg
             width="24"
-            height="3"
-            rx="1.5"
-            fill="white"
-            fill-opacity="0.8"
-          />
-          <rect
-            y="16"
-            width="16"
-            height="3"
-            rx="1.5"
-            fill="white"
-            fill-opacity="0.8"
-          />
-        </svg>
+            height="19"
+            viewBox="0 0 24 19"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            onClick={() => setOpenedMenu(true)}
+          >
+            <rect
+              width="24"
+              height="3"
+              rx="1.5"
+              fill="white"
+              fill-opacity="0.8"
+            />
+            <rect
+              y="8"
+              width="24"
+              height="3"
+              rx="1.5"
+              fill="white"
+              fill-opacity="0.8"
+            />
+            <rect
+              y="16"
+              width="16"
+              height="3"
+              rx="1.5"
+              fill="white"
+              fill-opacity="0.8"
+            />
+          </svg>
+        )}
+
+        <img src="/images/logo-single.png" alt="Logo" />
       </div>
       <div className="flex items-center gap-2">
         <Button label="sign up" />
