@@ -25,20 +25,25 @@ export default function Slider({
         {title}
       </h2>
       <Swiper
-        slidesPerView={type === "single" ? 1 : 4}
+        slidesPerView={type === "single" ? 1 : 3}
         spaceBetween={10}
         navigation={true}
         centeredSlides={type === "single"}
         modules={[Pagination, Navigation]}
-        className="pt-14!"
+        breakpoints={{
+          640: {
+            slidesPerView: type === "single" ? 1 : 4,
+          },
+        }}
+        className="pt-10! md:pt-15!"
       >
         {imagesUrls.map((url, index) => {
           return (
             <SwiperSlide key={index}>
               <img
                 src={url}
-                alt=""
                 className={clsx(
+                  "rounded-lg",
                   imgClassName,
                   type === "single" ? "w-full" : "w-180px"
                 )}
