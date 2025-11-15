@@ -6,19 +6,19 @@ import "swiper/css/navigation"; // nếu dùng module Navigation
 import "swiper/css/pagination"; // nếu dùng module Pagination
 import clsx from "clsx";
 
-type Props = {
+interface Props {
   title?: string;
   imagesUrls?: string[];
   type: "single" | "multiple";
   imgClassName?: string;
-};
+}
 
-export default function Slider({
+const Slider = ({
   title = "",
   imagesUrls = [],
   type = "single",
   imgClassName = "",
-}: Props) {
+}: Props) => {
   return (
     <div className="slider-wrap">
       <h2 className="text-primary text-[18px] md:text-[24px] absolute top-2 font-black italic">
@@ -54,4 +54,6 @@ export default function Slider({
       </Swiper>
     </div>
   );
-}
+};
+
+export default Slider;

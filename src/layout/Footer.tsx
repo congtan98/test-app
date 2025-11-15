@@ -60,11 +60,11 @@ const Footer = () => {
         © Copyright 2025. All Rights Reserved
       </p>
       <div className="flex items-center justify-center gap-6 flex-wrap">
-        <img src="/images/visa.png" alt="" />
-        <img src="/images/mastercard.png" alt="" />
-        <img src="/images/astropay.png" alt="" />
-        <img src="/images/interac.png" alt="" />
-        <img src="/images/jetonban.png" alt="" />
+        <img src="/images/visa.png" alt="Visa icon" />
+        <img src="/images/mastercard.png" alt="Mastercard icon" />
+        <img src="/images/astropay.png" alt="Astropay icon" />
+        <img src="/images/interac.png" alt="Interac icon" />
+        <img src="/images/jetonban.png" alt="Jetonban icon" />
       </div>
     </footer>
   );

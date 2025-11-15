@@ -4,15 +4,15 @@ import Slider from "./components/Slider";
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
 
-function App() {
-  const imagesUrls = [
-    "/images/slide1.png",
-    "/images/slide5.png",
-    "/images/slide2.png",
-    "/images/slide1.png",
-    "/images/slide5.png",
-  ];
+const imagesUrls = [
+  "/images/slide1.png",
+  "/images/slide5.png",
+  "/images/slide2.png",
+  "/images/slide1.png",
+  "/images/slide5.png",
+];
 
+const App = () => {
   return (
     <div className="bg-secondary-900">
       <Header />
@@ -110,8 +110,8 @@ function App() {
                 </h2>
                 <img
                   src="/images/new-product.png"
-                  alt=""
-                  className="md:h-[300px] rounded-lg"
+                  alt="new product"
+                  className="h-[200px] md:h-[300px] rounded-lg w-full"
                 />
               </div>
               <div className="w-1/2">
@@ -119,9 +119,9 @@ function App() {
                   SALE
                 </h2>
                 <img
-                  src="/images/new-product.png"
-                  alt=""
-                  className="md:h-[300px] rounded-lg"
+                  src="/images/sale.png"
+                  alt="sale"
+                  className="h-[200px] md:h-[300px] rounded-lg w-full"
                 />
               </div>
             </div>
@@ -132,6 +132,6 @@ function App() {
       <Popup />
     </div>
   );
-}
+};
 
 export default App;
