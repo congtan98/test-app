@@ -73,4 +73,4 @@ export default defineConfig([
 ```
 
 <img src="./public/images/fullpage.png" />
-<img src="./public/images/fullpagemobile.png" width={500} />
+<img src="./public/images/fullpagemobile.png" width={300} />
