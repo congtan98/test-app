@@ -29,7 +29,7 @@ const Header = () => {
           return (
             <span
               className={clsx(
-                "text-neutral-200 uppercase cursor-pointer px-5 py-2 rounded-[100px]",
+                "text-neutral-200 uppercase cursor-pointer px-5 py-2 rounded-[100px] hover:text-primary",
                 activeTab === menu ? "text-primary bg-secondary-600" : ""
               )}
               onClick={() => setActiveTab(menu)}

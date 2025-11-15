@@ -14,12 +14,12 @@ function App() {
   ];
 
   return (
-    <div className="bg-[#141415]">
+    <div className="bg-secondary-900">
       <Header />
       <main>
         <div className="relative">
           <div className="absolute top-3 md:top-11 left-0 right-0 m-auto text-center">
-            <h1 className="font-bold text-[24px] md:text-[48px] bg-linear-to-r from-[#FFFFFF] via-[#FFD3E3] to-[#FFEA9F] inline-block text-transparent bg-clip-text">
+            <h1 className="font-bold text-[24px] md:text-[48px] bg-linear-to-r from-neutral via-[#FFD3E3] to-[#FFEA9F] inline-block text-transparent bg-clip-text">
               XIAOMI TV max Series
             </h1>
             <h3 className="text-neutral font-light text-[16px] md:text-[32px]">
@@ -33,7 +33,7 @@ function App() {
           />
         </div>
         <div className="py-10 md:py-20 px-5 lg:px-40 flex flex-col">
-          <h2 className="text-primary mb-1 text-[18px] md:text-[24px] font-black italic text-center bg-linear-to-r from-[#13141500] via-primary-900 to-[#13141500]">
+          <h2 className="text-primary mb-1 p-2 text-[18px] md:text-[24px] font-black italic text-center bg-linear-to-r from-[#13141500] via-primary-900 to-[#13141500]">
             TOP BEST-SELLING PRODUCTS
           </h2>
           <div className="mb-10 md:mb-20">
