@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "../components/Button";
 import clsx from "clsx";
 
@@ -7,13 +7,23 @@ const MENU_TABS = ["home", "product", "contact", "price"];
 const Header = () => {
   const [activeTab, setActiveTab] = React.useState("home");
   const [openedMenu, setOpenedMenu] = React.useState(false);
+
+  useEffect(() => {
+    if (openedMenu) document.body.style.overflow = "hidden";
+    else document.body.style.overflow = "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [openedMenu]);
+
   return (
-    <header className="bg-[#141415] flex items-center justify-between md:justify-evenly p-3.5">
+    <header className="bg-[#141415] flex items-center justify-between md:justify-evenly p-3 md:p-5">
       <div className="hidden md:flex items-center">
         <img
           src="/images/logo.png"
           alt="logo"
-          className="w-[138px] mr-8 cursor-pointer"
+          className="mr-8 cursor-pointer h-10"
+         
         />
         {MENU_TABS.map((menu) => {
           return (
