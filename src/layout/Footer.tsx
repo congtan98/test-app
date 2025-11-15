@@ -12,34 +12,34 @@ const Footer = () => {
           </div>
         </div>
         <div>
-          <h3 className="text-neutral font-black text-[16px] mb-3">ABOUT US</h3>
+          <h3 className="text-neutral font-black text-[16px] mb-3">HELP</h3>
           <div className="text-neutral-200 font-normal text-[14px] flex flex-col gap-2">
-            <p className="leading-5">Company Details</p>
-            <p className="leading-5">Term & Conditions</p>
-            <p className="leading-5">Privacy Policy</p>
-            <p className="leading-5">Afflicate</p>
+            <p className="leading-5">F.A.Q (Frequently Asked Questions)</p>
+            <p className="leading-5">AML/KYC Policy</p>
+            <p className="leading-5">Refund Policy</p>
+            <p className="leading-5">Dispute Resolution</p>
           </div>
         </div>
         <div>
-          <h3 className="text-neutral font-black text-[16px] mb-3">ABOUT US</h3>
+          <h3 className="text-neutral font-black text-[16px] mb-3">OUR PRODUCTS</h3>
           <div className="text-neutral-200 font-normal text-[14px] flex flex-col gap-2">
-            <p className="leading-5">Company Details</p>
-            <p className="leading-5">Term & Conditions</p>
-            <p className="leading-5">Privacy Policy</p>
-            <p className="leading-5">Afflicate</p>
+            <p className="leading-5">Product</p>
+            <p className="leading-5">Contact</p>
+            <p className="leading-5">Price</p>
+            <p className="leading-5">Sales</p>
           </div>
         </div>
         <div>
-          <h3 className="text-neutral font-black text-[16px] mb-3">ABOUT US</h3>
+          <h3 className="text-neutral font-black text-[16px] mb-3">CONTACT US</h3>
           <div className="text-neutral-200 font-normal text-[14px] flex flex-col gap-2">
-            <p className="leading-5">Company Details</p>
-            <p className="leading-5">Term & Conditions</p>
+            <p className="leading-5">support@xiaomi.email</p>
+            <p className="leading-5">affiliate@xiaomi.com</p>
             <img src="/images/install-app.png" alt="" className="w-[151px]" />
           </div>
         </div>
       </div>
       <div className="flex flex-col md:flex-row items-center gap-5">
-        <div className="flex">
+        <div className="flex gap-2">
           <img src="/images/18-plus.png" alt="18 plus" />
           <img src="/images/secure.png" alt="18 plus" />
         </div>

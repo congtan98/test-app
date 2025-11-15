@@ -113,7 +113,7 @@ const Header = () => {
             return (
               <div
                 className={clsx(
-                  "text-neutral-200 uppercase cursor-pointer px-5 py-2 rounded-[100px] mb-2 text-center",
+                  "text-neutral-200 uppercase cursor-pointer px-5 py-2 rounded-[100px] mb-2 text-center text-[14px]",
                   activeTab === menu ? "text-primary bg-secondary-600" : ""
                 )}
                 onClick={() => {
