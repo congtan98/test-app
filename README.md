@@ -71,6 +71,8 @@ export default defineConfig([
   },
 ])
 ```
-
+PC
 <img src="./public/images/fullpage.png" />
+
+MOBILE
 <img src="./public/images/fullpagemobile.png" width={300} />
