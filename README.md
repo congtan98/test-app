@@ -71,3 +71,6 @@ export default defineConfig([
   },
 ])
 ```
+
+<img src="./images/fullpage.png" />
+<img src="./images/fullpagemobile.png" />
