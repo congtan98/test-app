@@ -1,11 +1,11 @@
 import {
-  BarElement,
-  CategoryScale,
   Chart as ChartJS,
-  Legend,
+  CategoryScale,
   LinearScale,
+  BarElement,
   Title,
   Tooltip,
+  Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 
@@ -24,32 +24,31 @@ const data = {
   labels,
   datasets: [
     {
-      label: "Dataset 1",
-      data: [25],
+      label: "Dataset 3",
+      data: [1245],
       backgroundColor: "blue",
-      barThickness: 30,
-    },
-    {
-      label: "Dataset 2",
-      data: [75],
-      backgroundColor: "darkblue",
-      barThickness: 30,
+      barThickness: 50,
     },
   ],
 };
 
-const Chart1 = () => {
+const ChartC1 = () => {
   return (
     <Bar
       options={{
-        indexAxis: "y",
-        elements: { bar: { borderWidth: 1 } },
-        responsive: true,
-        maintainAspectRatio: false,
+        layout: {
+          padding: {
+            top: 20,
+            right: 20,
+            bottom: 20,
+            left: 20, // 👈 tăng khoảng cách giữa label Y và bar
+          },
+        },
         plugins: {
           legend: {
             position: "top",
             align: "start",
+
             labels: {
               usePointStyle: true,
               pointStyle: "circle",
@@ -59,23 +58,15 @@ const Chart1 = () => {
             display: true,
             text: "Chart.js Bar Chart - Stacked",
             align: "start",
+            position: "top",
           },
         },
-
-        scales: {
-          x: {
-            stacked: true,
-            grid: { display: false },
-          },
-          y: {
-            stacked: true,
-            grid: { display: false },
-          },
-        },
+        responsive: true,
+        maintainAspectRatio: false,
       }}
       data={data}
     />
   );
 };
 
-export default Chart1;
+export default ChartC1;

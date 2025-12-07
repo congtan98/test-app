@@ -8,7 +8,6 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import faker from "faker";
 
 ChartJS.register(
   CategoryScale,
@@ -19,55 +18,73 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
-  indexAxis: "y" as const,
-  elements: { bar: { borderWidth: 1 } },
-  responsive: true,
-    maintainAspectRatio: false,
-  plugins: {
-    legend: {
-      position: "top",
-      align: "start",
-      labels: {
-        usePointStyle: true,
-        pointStyle: "circle",
-      },
-    },
-  },
-
-  scales: {
-    x: {
-      stacked: true,grid: { display: false },
-    },
-    y: {
-      stacked: true,grid: { display: false },
-    },
-  },
-};
-
 const labels = ["January", "February", "March"];
 
-const dataFake = labels.map(() => faker.datatype.number({ min: 0, max: 100 }));
+function getRandomInt(min: number, max: number) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+const dataFake = labels.map(() => getRandomInt(0, 100));
 const dataFake2 = dataFake.map((item) => 100 - item);
 
-export const data = {
+const data = {
   labels,
   datasets: [
     {
       label: "Dataset 1",
       data: dataFake,
-      backgroundColor: "rgb(255, 99, 132)",
+      backgroundColor: "blue",
+      barThickness: 30,
     },
     {
       label: "Dataset 2",
       data: dataFake2,
-      backgroundColor: "rgb(75, 192, 192)",
+      backgroundColor: "darkblue",
+      barThickness: 30,
     },
   ],
 };
 
 const Chart3 = () => {
-  return <Bar options={options} data={data} />;
+  return (
+    <Bar
+      options={{
+        indexAxis: "y" as const,
+        elements: { bar: { borderWidth: 1 } },
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: "top",
+            align: "start",
+            labels: {
+              usePointStyle: true,
+              pointStyle: "circle",
+            },
+          },
+          title: {
+            display: true,
+            text: "Chart.js Bar Chart - Stacked",
+            align: "start",
+          },
+        },
+
+        scales: {
+          x: {
+            stacked: true,
+            grid: { display: false },
+          },
+          y: {
+            stacked: true,
+            grid: { display: false },
+          },
+        },
+      }}
+      data={data}
+    />
+  );
 };
 
 export default Chart3;
